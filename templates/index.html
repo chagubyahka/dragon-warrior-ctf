@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dragon Warrior Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <h1 class="title">Dragon Warrior Portal</h1>
+      <p class="subtitle">Only the true warrior may enter</p>
+
+      <form id="loginForm" class="login-form">
+        <div class="input-group">
+          <label for="username">Warrior Name</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your warrior name"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Sacred Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your sacred password"
+            autocomplete="off"
+          />
+        </div>
+
+        <button type="submit" class="login-btn">Enter</button>
+        <p id="message" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/unused.js') }}"></script>
+</body>
+</html>
