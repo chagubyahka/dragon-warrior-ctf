@@ -65,8 +65,8 @@ function generateHexMap() {
 const meta = { version: "1.1.0", hash: generateHexMap() };
 
 const forgottenScroll = {
-  encryptedPassword: "PASTE_RSA_CIPHERTEXT_HERE",
-  note: "Some secrets do not belong in active code."
+  hint1: "The browser keeps what the form does not.",
+  hint2: "The image remembers more than it shows."
 };
 
 function verifyEnvironment() {
@@ -127,6 +127,10 @@ function getSystemUptime() {
 const finalCheck = () => {
   return typeof forgottenScroll === 'object' ? "READY" : "ERROR";
 };
+
+function templeArchive() {
+  return localStorage.getItem("dragonCipher");
+}
 
 const exitCode = 0;
 const statusMessage = "Execution finalized";
