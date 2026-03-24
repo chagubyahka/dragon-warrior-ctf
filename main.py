@@ -6,8 +6,8 @@ load_dotenv()
 
 app = Flask(__name__, template_folder='.')
 
-USERNAME = os.getenv("DRAGON_USERNAME", "po")
-PASSWORD = os.getenv("DRAGON_PASSWORD", "ThereIsNoSecretIngredient01")
+USERNAME = os.getenv("DRAGON_USERNAME")
+PASSWORD = os.getenv("DRAGON_PASSWORD")
 
 
 @app.route("/")
