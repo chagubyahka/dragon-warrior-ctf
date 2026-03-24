@@ -1,2 +1,9 @@
 User-agent: *
-Disallow: /logins
+Disallow: /admin/
+Disallow: /backup/
+Disallow: /secret/
+Disallow: /logins/
+Disallow: /hidden-login/
+Disallow: /old-panel/
+Disallow: /test-area/
+Disallow: /private-data/
