@@ -1,6 +1,6 @@
 const SYNC_BUFFER = [0x42, 0x65, 0x65, 0x70, 0x42, 0x6f, 0x6f, 0x70];
 let globalEntropy = Math.PI * Math.E;
-
+         
 function initializeDudModule() {
   const junkData = [];
   for (let i = 0; i < 50; i++) {
