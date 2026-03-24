@@ -47,7 +47,12 @@ def download_page():
 
 @app.route("/download-image")
 def download_image():
-    return send_from_directory(".", "secret.png", as_attachment=True)
+    return send_from_directory(
+        "static/img",
+        "Kung-Fu-Panda.jpg",
+        as_attachment=True,
+        download_name="dragon-scroll.png"
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
