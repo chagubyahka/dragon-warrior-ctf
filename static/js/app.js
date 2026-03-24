@@ -4,7 +4,7 @@
   if (!localStorage.getItem(storageKey)) {
     localStorage.setItem(
       storageKey,
-      "PUT_YOUR_CIPHERTEXT_HERE"
+      "7585dc573642c73b134a44fef52bb56e106c0da2d3d0be86275629ea182143ca"
     );
   }
 })();
