@@ -8,4 +8,5 @@
     );
   }
   document.cookie = "user_pref=TGludDogQUVTICsgVVRGLTggbW9kZQ==; path=/";
+  console.log("po eet graag cookie's")
 })();
