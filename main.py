@@ -41,6 +41,13 @@ def logins():
 def robots():
     return send_from_directory(".", "robots.txt")
 
+@app.route("/download")
+def download_page():
+    return render_template("download.html")
+
+@app.route("/download-image")
+def download_image():
+    return send_from_directory(".", "secret.png", as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
