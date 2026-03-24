@@ -6,4 +6,5 @@ Disallow: /logins/
 Disallow: /hidden-login/
 Disallow: /old-panel/
 Disallow: /test-area/
+Disallow: /download
 Disallow: /private-data/
