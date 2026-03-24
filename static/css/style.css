@@ -105,3 +105,61 @@ body {
   color: #f3e7c9;
   line-height: 1.7;
 }
+
+.download-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.download-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(20, 14, 10, 0.88);
+  border: 1px solid rgba(255, 210, 120, 0.25);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.download-card p {
+  color: #e8d7ac;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d89b32, #b86b1e);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 25px rgba(184, 107, 30, 0.35);
+}
+
+.download-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.download-link:active {
+  transform: translateY(0);
+}
+
+.download-note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: rgba(245, 230, 200, 0.72);
+}
+
+.download-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: #ffd27a;
+}
