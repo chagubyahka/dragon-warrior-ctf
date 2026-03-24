@@ -5,10 +5,7 @@ from flask import Flask, render_template, send_from_directory, request, redirect
 load_dotenv()
 
 app = Flask(__name__, template_folder='.')
-
-app.secret_key = os.getenv("SECRET_KEY")
-if not app.secret_key:
-    raise ValueError("SECRET_KEY is not set")
+app.secret_key = os.getenv("SECRET_KEY", "dev-only-secret-key")
 
 USERNAME = os.getenv("DRAGON_USERNAME", "").strip().lower()
 PASSWORD = os.getenv("DRAGON_PASSWORD", "")
@@ -47,8 +44,6 @@ def logout():
 
 @app.route("/logins")
 def logins():
-    if not session.get("logged_in"):
-        return redirect(url_for("home", error="Login required"))
     return render_template("logins.html")
 
 
@@ -59,16 +54,11 @@ def robots():
 
 @app.route("/download")
 def download_page():
-    if not session.get("logged_in"):
-        return redirect(url_for("home", error="Login required"))
     return render_template("download.html")
 
 
 @app.route("/download-image")
 def download_image():
-    if not session.get("logged_in"):
-        return redirect(url_for("home", error="Login required"))
-
     return send_from_directory(
         "static/img",
         "Kung-Fu-Panda.jpg",
